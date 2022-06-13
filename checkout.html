@@ -194,47 +194,47 @@
                     <div class="checkout_details_area mt-50 clearfix">
 
                         
-
-                        <form action="#" method="post">
+                        <form action="php/recuperar.php" method="post">
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="first_name">Nombre <span>*</span></label>
-                                    <input type="text" class="form-control" id="first_name" value="" required>
+                                    <input type="text" class="form-control" name="nombre" id="first_name" value="" required>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="last_name">Apellido <span>*</span></label>
-                                    <input type="text" class="form-control" id="last_name" value="" required>
+                                    <input type="text" class="form-control" name="apellido" id="last_name" value="" required>
                                 </div>
                                 <div class="col-12 mb-3">
                                     <label for="company">Nombre de la empresa</label>
-                                    <input type="text" class="form-control" id="company" value="">
+                                    <input type="text" class="form-control" name="n_empresa" id="company" value="">
                                 </div>
                                 <div class="col-12 mb-3">
                                     <label for="street_address">Dirección <span>*</span></label>
-                                    <input type="text" class="form-control mb-3" id="street_address" value="">
-                                    <input type="text" class="form-control" id="street_address2" value="">
+                                    <input type="text" class="form-control mb-3" name="c_prin" id="street_address" value="">
+                                    <input type="text" class="form-control" name="c_secu" id="street_address2" value="">
                                 </div>
                                 
                                 <div class="col-12 mb-3">
                                     <label for="city">Ciudad <span>*</span></label>
-                                    <input type="text" class="form-control" id="city" value="">
+                                    <input type="text" class="form-control" name="ciudad" id="city" value="">
                                 </div>
                                 <div class="col-12 mb-3">
                                     <label for="state">Provincia <span>*</span></label>
-                                    <input type="text" class="form-control" id="state" value="">
+                                    <input type="text" class="form-control" name="provincia" id="state" value="">
                                 </div>
                                 <div class="col-12 mb-3">
                                     <label for="phone_number">Telefono <span>*</span></label>
-                                    <input type="number" class="form-control" id="phone_number" min="0" value="">
+                                    <input type="number" class="form-control" name="telefono" id="phone_number" min="0" value="">
                                 </div>
                                 <div class="col-12 mb-4">
                                     <label for="email_address">Correo electronico <span>*</span></label>
-                                    <input type="email" class="form-control" id="email_address" value="">
+                                    <input type="email" class="form-control" name="correo" id="email_address" value="">
                                 </div>
 
                                 
                             </div>
-                            <div><a href="#" class="btn essence-btn">cotizar</a></div>
+                            <div><!--<a href="php/recuperar.php" class="btn essence-btn">cotizar</a>-->
+                            <input type="submit" class="btn essence-btn" value="cotizar"></div>
                             
                         </form>
                     </div>

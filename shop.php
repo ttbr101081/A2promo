@@ -91,7 +91,8 @@
                 
                 <!-- Cart Area -->
                 <div class="cart-area">
-                    <a href="#" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt=""> <span>3</span></a>
+                    <a href="#" id="rightSideCart" class="btn-carrito"><img src="https://img.icons8.com/ios-glyphs/30/000000/add-shopping-cart.png"/></a>
+                    <!--<a href="#" id="essenceCartBtn"><img src="img/core-img/bag.svg" alt=""> <span>3</span></a>-->
                 </div> 
             </div>
 
@@ -106,7 +107,8 @@
 
         <!-- Cart Button -->
         <div class="cart-button">
-            <a href="#" id="rightSideCart"><img src="img/core-img/bag.svg" alt=""> <span>3</span></a>
+            <a href="#" id="rightSideCart" class="btn-carrito"><img src="https://img.icons8.com/ios-glyphs/30/000000/add-shopping-cart.png"/></a>
+            <!--<img src="img/core-img/bag.svg" alt=""> -->
         </div>
 
         <div class="cart-content d-flex">
@@ -241,9 +243,9 @@
                                     <li data-toggle="collapse" data-target="#accessories" class="collapsed">
                                         <a href="#">accesorios</a>
                                         <ul class="sub-menu collapse" id="accessories">
-                                            <li><a href="#">Todos</a></li>
-                                            <li><a href="#">Cartucheras</a></li>
-                                            <li><a href="#">Maletas Transporta mascotas</a></li>
+                                            <li><a href="shop.php">Todos</a></li>
+                                            <li><a href="shop.php?cate=1">Cartucheras</a></li>
+                                            <li><a href="shop.php?cate=2">Maletas Transporta mascotas</a></li>
                                             <li><a href="#">Cinturones</a></li>
                                             <li><a href="#">Porta mascotas</a></li>
                                             <li><a href="#">Estuches (Chef)</a></li>
@@ -265,6 +267,7 @@
 
                 <div class="col-12 col-md-8 col-lg-9">
                     <div class="shop_grid_product_area">
+<<<<<<< HEAD:shop.html
                         
 
                         <div class="row">
@@ -550,7 +553,34 @@
                                 </div>
                             </div>
 
+=======
+                        <div class="row">
+                            
+                        <?php
+                        if(isset($_GET['cate'])){
+                            $cat = $_GET['cate'];
+                            $response = json_decode(file_get_contents('http://localhost/A2promo/api/productos/api_productos.php?categoria='. $cat), true);
+                            if($response['statuscode']==200){
+                                foreach($response['items'] as $item){
+                                    include('layout/items.php');
+                                }
+                            }else{
+        
+                            }
+                        }else{
+                            $response = json_decode(file_get_contents('http://localhost/A2promo/api/productos/api_productos.php'), true);
+                            if($response['statuscode']==200){
+                                foreach($response['items'] as $item){
+                                    include('layout/items.php');
+                                }
+                            }else{
+        
+                            }
+                        }
+                        ?>
+>>>>>>> 32fd44cd0708be95edf8cab314baddfe98fc213a:shop.php
                         </div>
+                        
                     </div>
                     <!-- Pagination -->
                     <nav aria-label="navigation">
@@ -636,6 +666,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Derec
     <!-- Active js -->
     <script src="js/active.js"></script>
 
+    <script src="js/main.js"></script>
 </body>
 
 </html>
